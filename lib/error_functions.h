@@ -25,4 +25,7 @@ void fatal(const char *format, ...) NORETURN;
 // 诊断命令行参数使用方面的错误，风格与printf相同，在标准错误打印字符串 Usage: 随之格式化输出，终止程序
 void usageErr(const char *format, ...) NORETURN;
 
+// 
+void cmdLineErr(const char *format, ...) NORETURN;
+
 #endif

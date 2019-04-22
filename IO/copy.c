@@ -32,7 +32,7 @@ int main(int argc, char *argv[]){
 		errExit("opening file %s", argv[2]);
 
 	while((numRead = read(inputFd, buf, BUF_SIZE)) > 0)
-		if(write(outputFd, buf, BUF_SIZE) != numRead)
+		if(write(outputFd, buf, numRead) != numRead)
 			fatal("couldn't write whole buffer");
 	if(numRead == -1)
 		errExit("read");
